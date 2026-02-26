@@ -15,6 +15,8 @@ int main()
   float area1;
   float pib1;
   int pontosTuristicos1;
+  float densidadePopulacional1;
+  float pibPerCapita1;
   // Carta 2
   char estado2;
   char codigo2[4];
@@ -23,6 +25,8 @@ int main()
   float area2;
   float pib2;
   int pontosTuristicos2;
+  float densidadePopulacional2;
+  float pibPerCapita2;
 
   // Área para entrada de dados
   // Dados para Carta 1
@@ -61,16 +65,22 @@ int main()
   scanf(" %d", &pontosTuristicos2);
   printf("\n");
 
+  // Calcular a Densidade Populacional e o PIB per Capita
+  densidadePopulacional1 = (populacao1 / area1);
+  densidadePopulacional2 = (populacao2 / area2);
+  pibPerCapita1 = (pib1 / populacao1);
+  pibPerCapita2 = (pib2 / populacao2);
+
   // Área para exibição dos dados da cidade
   printf("\nCartas Cadastradas:\n");
   // Exibição da Carta 1
   printf("|--------Carta 1--------\n");
-  printf("| Estado: %c - Código: %s \n| Nome da Cidade: %s \n| População : %d \n| Área : %.2f km² \n| PIB : %.2f bilhões de reais \n| Pontos Turísticos : %d\n", estado1, codigo1, nomeCidade1, populacao1, area1, pib1, pontosTuristicos1);
+  printf("| Estado: %c - Código: %s \n| Nome da Cidade: %s \n| População : %d \n| Área : %.2f km² \n| PIB : %.2f bilhões de reais \n| Pontos Turísticos : %d\n| Densidade Populacional : %.2f hab/km² \n| PIB per Capita : %.2f bilhões de reais\n", estado1, codigo1, nomeCidade1, populacao1, area1, pib1, pontosTuristicos1, densidadePopulacional1, pibPerCapita1);
   printf("|----------------------- \n");
   printf("\n");
   // Exibição da Carta 2
   printf("|--------Carta 2--------\n");
-  printf("| Estado: %c - Código: %s \n| Nome da Cidade: %s \n| População : %d \n| Área : %.2f km² \n| PIB : %.2f bilhões de reais \n| Pontos Turísticos : %d\n", estado2, codigo2, nomeCidade2, populacao2, area2, pib2, pontosTuristicos2);
+  printf("| Estado: %c - Código: %s \n| Nome da Cidade: %s \n| População : %d \n| Área : %.2f km² \n| PIB : %.2f bilhões de reais \n| Pontos Turísticos : %d\n| Densidade Populacional : %.2f hab/km² \n| PIB per Capita : %.2f bilhões de reais\n", estado2, codigo2, nomeCidade2, populacao2, area2, pib2, pontosTuristicos2, densidadePopulacional2, pibPerCapita2);
   printf("|----------------------- \n \n");
 
   return 0;
