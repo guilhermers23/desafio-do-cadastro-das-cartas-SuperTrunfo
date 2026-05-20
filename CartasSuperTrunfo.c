@@ -90,18 +90,70 @@ int main()
   printf("| Estado: %c - Código: %s \n| Nome da Cidade: %s \n| População : %d \n| Área : %.2f km² \n| PIB : %.2f bilhões de reais \n| Pontos Turísticos : %d\n| Densidade Populacional : %.2f hab/km² \n| PIB per Capita : %.2f bilhões de reais \n| Super Poder : %.2f\n", estado2, codigo2, nomeCidade2, populacao2, area2, pib2, pontosTuristicos2, densidadePopulacional2, pibPerCapita2, superPoderC2);
   printf("|----------------------- \n \n");
 
+  // Tema 2 - Comparando Cartas do Super Trunfo
+  //  Objetivo: Você implementará a lógica para comparar duas cartas e determinar a vencedora com base em um único atributo numérico (como população, área, PIB, etc.). Este desafio é uma continuação do desafio do tema anterior, onde você desenvolveu o cadastro das cartas e você poderá reaproveitar o código de cadastro de cartas que já foi desenvolvido. O foco deste nível é a comparação entre duas cartas já cadastradas, utilizando estruturas de decisão if e if-else.
+
   // Comparando as CARTAS
   printf("***** CARTAS EM COMBATE *****\n");
-  printf("Resultando = 1 - Carta 1 venceu\n");
-  printf("Resultando = 0 - Carta 2 venceu\n");
-  printf("População: %d \n", (populacao1 > populacao2));
-  printf("Area: %d \n", (area1 > area2));
-  printf("PIB: %d \n", (pib1 > pib2));
-  printf("Pontos Turisticos: %d \n", (pontosTuristicos1 > pontosTuristicos2));
-  printf("Densidade Populacional: %d \n", (densidadePopulacional1 < densidadePopulacional2));
-  printf("PIB per Capita: %d \n", (pibPerCapita1 > pibPerCapita2));
-  printf("Super Poder %d \n", (superPoderC1 > superPoderC2));
-  printf("******************************");
+  printf("Carta1: %s - População: %d \n", nomeCidade1, populacao1);
+  printf("Carta2: %s - População: %d \n", nomeCidade2, populacao2);
+  if (populacao1 > populacao2)
+  {
+    printf("Carta 1: %s  é a vencedora com base na população!\n", nomeCidade1);
+  }
+  else if (populacao1 < populacao2)
+  {
+    printf("Carta 2: %s é a vencedora com base na população!\n", nomeCidade2);
+  }
+  else
+  {
+    printf("Empate! Ambas as cartas têm a mesma população.\n");
+  };
+
+  printf("Carta1: %s - Área: %d \n", nomeCidade1, area1);
+  printf("Carta2: %s - Área: %d \n", nomeCidade2, area2);
+  if (area1 > area2)
+  {
+    printf("Carta 1: %s  é a vencedora com base na Área!\n", nomeCidade1);
+  }
+  else if (area1 < area2)
+  {
+    printf("Carta 2: %s é a vencedora com base na Área!\n", nomeCidade2);
+  }
+  else
+  {
+    printf("Empate! Ambas as cartas têm a mesma Área.\n");
+  };
+
+  printf("Carta1: %s - Densidade Populacional: %d \n", nomeCidade1, densidadePopulacional1);
+  printf("Carta2: %s - Densidade Populacional: %d \n", nomeCidade2, densidadePopulacional2);
+  if (densidadePopulacional1 < densidadePopulacional2)
+  {
+    printf("Carta 1: %s  é a vencedora com base na Densidade Populacional!\n", nomeCidade1);
+  }
+  else if (densidadePopulacional1 > densidadePopulacional2)
+  {
+    printf("Carta 2: %s é a vencedora com base na Densidade Populacional!\n", nomeCidade2);
+  }
+  else
+  {
+    printf("Empate! Ambas as cartas têm a mesma Densidade Populacional.\n");
+  };
+
+  printf("Carta1: %s - Super Poder: %d \n", nomeCidade1, superPoderC1);
+  printf("Carta2: %s - Super Poder: %d \n", nomeCidade2, superPoderC2);
+  if (superPoderC1 > superPoderC2)
+  {
+    printf("Carta 1: %s  é a vencedora com base no Super Poder!\n", nomeCidade1);
+  }
+  else if (superPoderC1 < superPoderC2)
+  {
+    printf("Carta 2: %s é a vencedora com base no Super Poder!\n", nomeCidade2);
+  }
+  else
+  {
+    printf("Empate! Ambas as cartas têm o mesmo Super Poder.\n");
+  };
 
   return 0;
 }
